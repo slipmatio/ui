@@ -6,6 +6,19 @@
     "name": "Ville Säävuori",
     "email": "ville@unessa.net"
   },
+  "keywords": [
+    "vue",
+    "typescript",
+    "slipmatio"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/slipmatio/ui.git"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/slipmatio/ui/-/issues"
+  },
+  "homepage": "https://gitlab.com/slipmatio/ui",
   "license": "MIT",
   "main": "dist/ui.ssr.js",
   "browser": "dist/ui.esm.js",
