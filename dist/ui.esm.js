@@ -17,11 +17,13 @@ var script = /*#__PURE__*/defineComponent({
 
   computed: {
     changedBy() {
+      var _message$amount;
+
       const {
         message
       } = this;
       if (!message.action) return 'initialized';
-      return `${message?.action} ${message.amount ?? ''}`.trim();
+      return `${message === null || message === void 0 ? void 0 : message.action} ${(_message$amount = message.amount) !== null && _message$amount !== void 0 ? _message$amount : ''}`.trim();
     }
 
   },
