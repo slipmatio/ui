@@ -31,3 +31,9 @@ yarn build
 ```
 yarn test:e2e
 ```
+
+### Publishing
+
+```
+yarn publish --new-version "0.0.2" --access public
+```

@@ -1,6 +1,6 @@
 {
   "name": "@slipmatio/ui",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Common UI components for Slipmat.io projects",
   "author": {
     "name": "Ville Säävuori",
@@ -32,7 +32,7 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "rebuild": "scripts/rebuild.sh",
+    "rebuild": "bash scripts/rebuild.sh",
     "dev": "vue-cli-service serve dev/serve.ts",
     "serve": "vue-cli-service serve dev/serve.ts",
     "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
@@ -60,10 +60,10 @@
     "cross-env": "^7.0.2",
     "eslint": "^7.14.0",
     "minimist": "^1.2.5",
-    "rollup": "^2.34.0",
+    "rollup": "^2.30.0",
     "rollup-plugin-postcss": "^3.1.8",
     "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-vue": "^6.0.0-beta.11",
+    "rollup-plugin-vue": "^6.0.0-beta.10",
     "typescript": "^4.1.2",
     "vue": "^3.0.0"
   },
