@@ -3,8 +3,9 @@
     :type="buttonType"
     class="btn"
     :class="{
-      primary: isPrimary,
-      secondary: isSecondary,
+      'primary': isPrimary,
+      'secondary': isSecondary,
+      'full-width': isFullWidth,
     }"
   >
     <svg
@@ -145,6 +146,7 @@ export default /*#__PURE__*/ defineComponent({
       isPrimary: false,
       isSecondary: false,
       buttonType: 'button',
+      isFullWidth: false,
     }
   },
   created() {
@@ -156,16 +158,23 @@ export default /*#__PURE__*/ defineComponent({
     if (this.$attrs.submit !== undefined) {
       this.buttonType = 'submit'
     }
+    if (this.$attrs['full-width'] !== undefined) {
+      this.isFullWidth = true
+    }
   },
 })
 </script>
 <style>
 .btn {
-  @apply inline-flex items-center px-3 py-1 text-sm font-normal leading-5 transition duration-150 ease-in-out rounded-md border border-gray-300 disabled:opacity-50;
+  @apply inline-flex px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 leading-5 transition duration-150 ease-in-out;
+}
+
+.btn.full-width {
+  @apply justify-center w-full;
 }
 
 .btn.primary {
-  @apply bg-slipmat-600 text-white focus:border-slipmat-400 hover:text-gray-100 hover:bg-slipmat-500 active:bg-slipmat-500 focus:ring-slipmat-300 focus:ring-opacity-50;
+  @apply bg-slipmat-500 hover:bg-slipmat-600 dark:bg-slipmat-600 dark:hover:bg-slipmat-500 text-white focus:border-slipmat-400 hover:text-gray-100 active:bg-slipmat-500 focus:ring-opacity-50 focus:ring-slipmat-400 dark:focus:ring-slipmat-400;
 }
 
 .btn.secondary {

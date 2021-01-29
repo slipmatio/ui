@@ -168,7 +168,8 @@ var script$2 = /*#__PURE__*/defineComponent({
     return {
       isPrimary: false,
       isSecondary: false,
-      buttonType: 'button'
+      buttonType: 'button',
+      isFullWidth: false
     };
   },
 
@@ -181,6 +182,10 @@ var script$2 = /*#__PURE__*/defineComponent({
 
     if (this.$attrs.submit !== undefined) {
       this.buttonType = 'submit';
+    }
+
+    if (this.$attrs['full-width'] !== undefined) {
+      this.isFullWidth = true;
     }
   }
 
@@ -308,8 +313,9 @@ function render$2(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createBlock("button", {
     type: _ctx.buttonType,
     class: ["btn", {
-      primary: _ctx.isPrimary,
-      secondary: _ctx.isSecondary
+      'primary': _ctx.isPrimary,
+      'secondary': _ctx.isSecondary,
+      'full-width': _ctx.isFullWidth
     }]
   }, [_ctx.isWorking ? (openBlock(), createBlock("svg", _hoisted_1$1, [_hoisted_2$1, _hoisted_3])) : createCommentVNode("", true), _ctx.icon === 'trash' && !_ctx.isWorking ? (openBlock(), createBlock("svg", _hoisted_4, [_hoisted_5])) : createCommentVNode("", true), _ctx.icon === 'new' && !_ctx.isWorking ? (openBlock(), createBlock("svg", _hoisted_6, [_hoisted_7])) : createCommentVNode("", true), _ctx.icon === 'edit' && !_ctx.isWorking ? (openBlock(), createBlock("svg", _hoisted_8, [_hoisted_9, _hoisted_10])) : createCommentVNode("", true), _ctx.icon === 'download' && !_ctx.isWorking ? (openBlock(), createBlock("svg", _hoisted_11, [_hoisted_12])) : createCommentVNode("", true), _ctx.icon === 'upload' && !_ctx.isWorking ? (openBlock(), createBlock("svg", _hoisted_13, [_hoisted_14])) : createCommentVNode("", true), _ctx.icon === 'reset' && !_ctx.isWorking ? (openBlock(), createBlock("svg", _hoisted_15, [_hoisted_16])) : createCommentVNode("", true), !_ctx.isWorking ? renderSlot(_ctx.$slots, "default", {
     key: 7
@@ -322,7 +328,7 @@ function render$2(_ctx, _cache, $props, $setup, $data, $options) {
   )) : createCommentVNode("", true)], 10, ["type"]);
 }
 
-var css_248z$1 = ".btn {\n  --tw-border-opacity: 1;\n  border-color: rgba(209, 213, 219, var(--tw-border-opacity));\n  border-radius: 0.375rem;\n  border-width: 1px;\n  display: inline-flex;\n  align-items: center;\n  font-weight: 400;\n  font-size: 0.875rem;\n  line-height: 1.25rem;\n  line-height: 1.25rem;\n}\n\n.btn:disabled {\n  opacity: 0.5;\n}\n\n.btn {\n  padding-top: 0.25rem;\n  padding-bottom: 0.25rem;\n  padding-left: 0.75rem;\n  padding-right: 0.75rem;\n  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  transition-duration: 150ms;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  transition-duration: 150ms;\n}\n\n.btn.primary {\n  --tw-bg-opacity: 1;\n  background-color: rgba(201, 0, 0, var(--tw-bg-opacity));\n}\n\n.btn.primary:hover {\n  --tw-bg-opacity: 1;\n  background-color: rgba(223, 0, 0, var(--tw-bg-opacity));\n}\n\n.btn.primary:active {\n  --tw-bg-opacity: 1;\n  background-color: rgba(223, 0, 0, var(--tw-bg-opacity));\n}\n\n.btn.primary:focus {\n  --tw-border-opacity: 1;\n  border-color: rgba(233, 77, 77, var(--tw-border-opacity));\n  --tw-ring-opacity: 1;\n  --tw-ring-color: rgba(242, 153, 153, var(--tw-ring-opacity));\n  --tw-ring-opacity: 0.5;\n}\n\n.btn.primary {\n  --tw-text-opacity: 1;\n  color: rgba(255, 255, 255, var(--tw-text-opacity));\n}\n\n.btn.primary:hover {\n  --tw-text-opacity: 1;\n  color: rgba(243, 244, 246, var(--tw-text-opacity));\n}\n\n.btn.secondary {\n  --tw-bg-opacity: 1;\n  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));\n}\n\n.btn.secondary:hover {\n  --tw-bg-opacity: 1;\n  background-color: rgba(249, 250, 251, var(--tw-bg-opacity));\n}\n\n.btn.secondary:active {\n  --tw-bg-opacity: 1;\n  background-color: rgba(249, 250, 251, var(--tw-bg-opacity));\n}\n\n.btn.secondary:focus {\n  --tw-border-opacity: 1;\n  border-color: rgba(242, 153, 153, var(--tw-border-opacity));\n  outline: 2px solid transparent;\n  outline-offset: 2px;\n  --tw-ring-opacity: 1;\n  --tw-ring-color: rgba(59, 130, 246, var(--tw-ring-opacity));\n}\n\n.btn.secondary {\n  --tw-text-opacity: 1;\n  color: rgba(55, 65, 81, var(--tw-text-opacity));\n}\n\n.btn.secondary svg {\n  --tw-text-opacity: 1;\n  color: rgba(107, 114, 128, var(--tw-text-opacity));\n}\n";
+var css_248z$1 = ".btn {\n  border-color: transparent;\n  border-radius: 0.375rem;\n  border-width: 1px;\n  display: inline-flex;\n  font-weight: 500;\n  font-size: 0.875rem;\n  line-height: 1.25rem;\n  line-height: 1.25rem;\n}\n\n.btn:disabled {\n  opacity: 0.5;\n}\n\n.btn:focus {\n  outline: 2px solid transparent;\n  outline-offset: 2px;\n}\n\n.btn {\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n  padding-left: 1rem;\n  padding-right: 1rem;\n  --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);\n  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);\n}\n\n.btn:focus {\n  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);\n  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);\n  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);\n  --tw-ring-offset-width: 2px;\n}\n\n.btn {\n  --tw-text-opacity: 1;\n  color: rgba(255, 255, 255, var(--tw-text-opacity));\n  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  transition-duration: 150ms;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  transition-duration: 150ms;\n}\n\n.btn.full-width {\n  justify-content: center;\n  width: 100%;\n}\n\n.btn.primary {\n  --tw-bg-opacity: 1;\n  background-color: rgba(223, 0, 0, var(--tw-bg-opacity));\n}\n\n.btn.primary:hover {\n  --tw-bg-opacity: 1;\n  background-color: rgba(201, 0, 0, var(--tw-bg-opacity));\n}\n\n.btn.primary:active {\n  --tw-bg-opacity: 1;\n  background-color: rgba(223, 0, 0, var(--tw-bg-opacity));\n}\n\n.dark .btn.primary {\n  --tw-bg-opacity: 1;\n  background-color: rgba(201, 0, 0, var(--tw-bg-opacity));\n}\n\n.dark .btn.primary:hover {\n  --tw-bg-opacity: 1;\n  background-color: rgba(223, 0, 0, var(--tw-bg-opacity));\n}\n\n.btn.primary:focus {\n  --tw-border-opacity: 1;\n  border-color: rgba(233, 77, 77, var(--tw-border-opacity));\n  --tw-ring-opacity: 1;\n  --tw-ring-color: rgba(233, 77, 77, var(--tw-ring-opacity));\n}\n\n.dark .btn.primary:focus {\n  --tw-ring-opacity: 1;\n  --tw-ring-color: rgba(233, 77, 77, var(--tw-ring-opacity));\n}\n\n.btn.primary:focus {\n  --tw-ring-opacity: 0.5;\n}\n\n.btn.primary {\n  --tw-text-opacity: 1;\n  color: rgba(255, 255, 255, var(--tw-text-opacity));\n}\n\n.btn.primary:hover {\n  --tw-text-opacity: 1;\n  color: rgba(243, 244, 246, var(--tw-text-opacity));\n}\n\n.btn.secondary {\n  --tw-bg-opacity: 1;\n  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));\n}\n\n.btn.secondary:hover {\n  --tw-bg-opacity: 1;\n  background-color: rgba(249, 250, 251, var(--tw-bg-opacity));\n}\n\n.btn.secondary:active {\n  --tw-bg-opacity: 1;\n  background-color: rgba(249, 250, 251, var(--tw-bg-opacity));\n}\n\n.btn.secondary:focus {\n  --tw-border-opacity: 1;\n  border-color: rgba(242, 153, 153, var(--tw-border-opacity));\n  outline: 2px solid transparent;\n  outline-offset: 2px;\n  --tw-ring-opacity: 1;\n  --tw-ring-color: rgba(59, 130, 246, var(--tw-ring-opacity));\n}\n\n.btn.secondary {\n  --tw-text-opacity: 1;\n  color: rgba(55, 65, 81, var(--tw-text-opacity));\n}\n\n.btn.secondary svg {\n  --tw-text-opacity: 1;\n  color: rgba(107, 114, 128, var(--tw-text-opacity));\n}\n";
 styleInject(css_248z$1);
 
 script$2.render = render$2;
