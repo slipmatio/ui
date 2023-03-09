@@ -3,6 +3,7 @@
 ## 0.0.8 (2021-02-02)
 
 - Bumped deps.
+
 ## 0.0.7 (2021-01-29)
 
 - Refactor: tweaked colors for v3 dark mode.

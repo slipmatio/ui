@@ -1,6 +1,6 @@
 {
   "name": "@slipmatio/ui",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Common UI components for Slipmat.io projects",
   "author": {
     "name": "Ville Säävuori",
@@ -13,12 +13,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/slipmatio/ui.git"
+    "url": "https://github.com/slipmatio/ui"
   },
   "bugs": {
-    "url": "https://gitlab.com/slipmatio/ui/-/issues"
+    "url": "https://github.com/slipmatio/ui/issues"
   },
-  "homepage": "https://gitlab.com/slipmatio/ui",
+  "homepage": "https://slipmat.io",
   "license": "MIT",
   "main": "dist/ui.ssr.js",
   "browser": "dist/ui.esm.js",
@@ -41,9 +41,9 @@
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
   },
   "dependencies": {
-    "autoprefixer": "^9",
-    "postcss": "^7",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+    "autoprefixer": "10",
+    "postcss": "8",
+    "tailwindcss": "3"
   },
   "devDependencies": {
     "@babel/core": "~7.12",
@@ -54,13 +54,9 @@
     "@rollup/plugin-commonjs": "~17.1",
     "@rollup/plugin-node-resolve": "~11.1",
     "@rollup/plugin-replace": "~2.3",
-    "@slipmatio/tailwind-config": "~2.1",
+    "@slipmatio/tailwind-config": "3",
     "@typescript-eslint/eslint-plugin": "~4.14",
     "@typescript-eslint/parser": "~4.14",
-    "@vue/cli-plugin-babel": "~4.5",
-    "@vue/cli-plugin-typescript": "~4.5",
-    "@vue/cli-service": "~4.5",
-    "@vue/compiler-sfc": "~3.0",
     "cross-env": "~7.0",
     "eslint": "~7.19",
     "minimist": "~1.2",
@@ -69,13 +65,13 @@
     "rollup-plugin-terser": "~7.0",
     "rollup-plugin-vue": "~6.0",
     "typescript": "~4.1",
-    "vue": "~3.0"
+    "vue": "^3.2"
   },
   "peerDependencies": {
-    "@slipmatio/tailwind-config": "~2.1",
-    "vue": "~3.0"
+    "@slipmatio/tailwind-config": "3",
+    "vue": "3"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   }
 }
