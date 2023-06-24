@@ -1,43 +1,29 @@
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script setup lang="ts">
+import { ref, useAttrs } from 'vue'
 
-export default /*#__PURE__*/ defineComponent({
-  props: {
-    icon: {
-      type: String,
-      required: false,
-    },
-    isWorking: {
-      type: Boolean,
-      required: false,
-    },
-    workingText: {
-      type: String,
-      required: false,
-    },
-  },
-  data() {
-    return {
-      isPrimary: false,
-      isSecondary: false,
-      buttonType: 'button',
-      isFullWidth: false,
-    }
-  },
-  created() {
-    if (this.$attrs.primary !== undefined) {
-      this.isPrimary = true
-    } else if (this.$attrs.secondary !== undefined) {
-      this.isSecondary = true
-    }
-    if (this.$attrs.submit !== undefined) {
-      this.buttonType = 'submit'
-    }
-    if (this.$attrs['full-width'] !== undefined) {
-      this.isFullWidth = true
-    }
-  },
-})
+defineProps<{
+  icon?: string
+  isWorking?: boolean
+  workingText?: string
+}>()
+
+const isPrimary = ref(false)
+const isSecondary = ref(false)
+const buttonType = ref<'button' | 'submit'>('button')
+const isFullWidth = ref(false)
+const attrs = useAttrs()
+
+if (attrs.primary !== undefined) {
+  isPrimary.value = true
+} else if (attrs.secondary !== undefined) {
+  isSecondary.value = true
+}
+if (attrs.submit !== undefined) {
+  buttonType.value = 'submit'
+}
+if (attrs['full-width'] !== undefined) {
+  isFullWidth.value = true
+}
 </script>
 <template>
   <button
