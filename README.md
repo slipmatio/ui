@@ -2,6 +2,13 @@
 
 Warning: this project is under active development and not intended for public use yet. **Do not use in production.**
 
+## Usage
+
+1. Install `@slipmatio/ui`
+2. Import a component
+3. Import styles: `import '@slipmatio/ui/style.css'`
+4. Profit!11
+
 ## Developing
 
 ### Basic Commands
