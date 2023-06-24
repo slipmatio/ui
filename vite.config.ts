@@ -9,8 +9,9 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      name: 'slipmatio-ui',
-      fileName: 'slipmatio-ui',
+      name: 'Ui',
+      fileName: 'index',
+      formats: ['es', 'umd'],
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
