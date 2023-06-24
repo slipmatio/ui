@@ -20,8 +20,8 @@
   },
   "homepage": "https://slipmat.io",
   "license": "MIT",
-  "main": "dist/slipmatio.ui.umd.js",
-  "module": "dist/slipmatio.ui.mjs",
+  "main": "dist/slipmatio-ui.umd.js",
+  "module": "dist/slipmatio-ui.mjs",
   "types": "dist/index.d.ts",
   "files": [
     "dist/*",

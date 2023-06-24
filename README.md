@@ -6,34 +6,34 @@ Warning: this project is under active development and not intended for public us
 
 ### Basic Commands
 
-You need `yarn` (classic) installed.
+You need `pnpm` installed.
 
 #### Project setup
 
 ```
-yarn install
+pnpm i
 ```
 
 #### Start development server
 
 ```
-yarn dev
+pnpm dev
 ```
 
 #### Build for production
 
 ```
-yarn build
+pnpm build
 ```
 
 #### TBA: Run end-to-end tests
 
 ```
-yarn test:e2e
+pnpm test:e2e
 ```
 
 ### Publishing
 
 ```
-yarn publish --new-version "0.0.2" --access public
+pnpm publish --access public
 ```
