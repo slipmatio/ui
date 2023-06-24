@@ -1,29 +1,38 @@
-import type { DefineComponent, ComponentOptionsMixin, VNodeProps, AllowedComponentProps, ComponentCustomProps, ExtractPropTypes, PropType as __PropType } from 'vue';
-declare const _sfc_main: DefineComponent<{
+declare const _sfc_main: import("vue").DefineComponent<{
     icon: {
-        type: __PropType<string | undefined>;
+        type: StringConstructor;
         required: false;
     };
     isWorking: {
-        type: __PropType<boolean | undefined>;
+        type: BooleanConstructor;
         required: false;
     };
     workingText: {
-        type: __PropType<string | undefined>;
+        type: StringConstructor;
         required: false;
     };
-}, {}, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, VNodeProps & AllowedComponentProps & ComponentCustomProps, Readonly<ExtractPropTypes<{
+}, {
+    isPrimary: import("vue").Ref<boolean>;
+    isSecondary: import("vue").Ref<boolean>;
+    buttonType: import("vue").Ref<"button" | "submit">;
+    isFullWidth: import("vue").Ref<boolean>;
+    attrs: {
+        [x: string]: unknown;
+    };
+}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     icon: {
-        type: __PropType<string | undefined>;
+        type: StringConstructor;
         required: false;
     };
     isWorking: {
-        type: __PropType<boolean | undefined>;
+        type: BooleanConstructor;
         required: false;
     };
     workingText: {
-        type: __PropType<string | undefined>;
+        type: StringConstructor;
         required: false;
     };
-}>>, {}, {}>;
+}>>, {
+    isWorking: boolean;
+}, {}>;
 export default _sfc_main;

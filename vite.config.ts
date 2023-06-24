@@ -7,13 +7,7 @@ import dts from 'vite-plugin-dts'
 export default defineConfig({
   plugins: [
     vue(),
-    dts({
-      entryRoot: resolve(__dirname, 'src'),
-      outputDir: 'dist',
-      copyDtsFiles: true,
-      staticImport: true,
-      insertTypesEntry: true,
-    }),
+    dts(),
   ],
   build: {
     emptyOutDir: true,
