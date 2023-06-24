@@ -1,3 +1,44 @@
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default /*#__PURE__*/ defineComponent({
+  props: {
+    icon: {
+      type: String,
+      required: false,
+    },
+    isWorking: {
+      type: Boolean,
+      required: false,
+    },
+    workingText: {
+      type: String,
+      required: false,
+    },
+  },
+  data() {
+    return {
+      isPrimary: false,
+      isSecondary: false,
+      buttonType: 'button',
+      isFullWidth: false,
+    }
+  },
+  created() {
+    if (this.$attrs.primary !== undefined) {
+      this.isPrimary = true
+    } else if (this.$attrs.secondary !== undefined) {
+      this.isSecondary = true
+    }
+    if (this.$attrs.submit !== undefined) {
+      this.buttonType = 'submit'
+    }
+    if (this.$attrs['full-width'] !== undefined) {
+      this.isFullWidth = true
+    }
+  },
+})
+</script>
 <template>
   <button
     :type="buttonType"
@@ -123,48 +164,7 @@
     </template>
   </button>
 </template>
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default /*#__PURE__*/ defineComponent({
-  props: {
-    icon: {
-      type: String,
-      required: false,
-    },
-    isWorking: {
-      type: Boolean,
-      required: false,
-    },
-    workingText: {
-      type: String,
-      required: false,
-    },
-  },
-  data() {
-    return {
-      isPrimary: false,
-      isSecondary: false,
-      buttonType: 'button',
-      isFullWidth: false,
-    }
-  },
-  created() {
-    if (this.$attrs.primary !== undefined) {
-      this.isPrimary = true
-    } else if (this.$attrs.secondary !== undefined) {
-      this.isSecondary = true
-    }
-    if (this.$attrs.submit !== undefined) {
-      this.buttonType = 'submit'
-    }
-    if (this.$attrs['full-width'] !== undefined) {
-      this.isFullWidth = true
-    }
-  },
-})
-</script>
-<style>
+<style lang="postcss">
 .btn {
   @apply inline-flex px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 leading-5 transition duration-150 ease-in-out;
 }
