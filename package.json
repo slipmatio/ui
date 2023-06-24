@@ -20,22 +20,20 @@
   },
   "homepage": "https://slipmat.io",
   "license": "MIT",
-  "main": "dist/ui.ssr.js",
-  "browser": "dist/ui.esm.js",
-  "module": "dist/ui.esm.js",
-  "unpkg": "dist/ui.min.js",
-  "types": "ui.d.ts",
+  "main": "dist/slipmatio.ui.umd.js",
+  "module": "dist/slipmatio.ui.mjs",
+  "types": "dist/index.d.ts",
   "files": [
     "dist/*",
-    "ui.d.ts",
-    "src/**/*.vue"
+    "README.md",
+    "LICENSE.md"
   ],
   "sideEffects": false,
   "scripts": {
     "rebuild": "bash scripts/rebuild.sh",
-    "dev": "vite dev",
-    "serve": "vite preview",
-    "build": "vue-tsc && vite build"
+    "dev": "DEBUG=0 vite dev",
+    "serve": "DEBUG=0 vite preview",
+    "build": "DEBUG=0 vue-tsc && vite build"
   },
   "devDependencies": {
     "@slipmatio/tailwind-config": "3.0.0",
