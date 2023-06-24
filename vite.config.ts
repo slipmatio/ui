@@ -8,18 +8,20 @@ export default defineConfig({
   plugins: [
     vue(),
     dts({
-      // copyDtsFiles: true,
-      // outputDir: 'dist',
-      // staticImport: true,
-      // insertTypesEntry: true,
+      entryRoot: resolve(__dirname, 'src'),
+      outputDir: 'dist',
+      copyDtsFiles: true,
+      staticImport: true,
+      insertTypesEntry: true,
     }),
   ],
   build: {
+    emptyOutDir: true,
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'Ui',
-      fileName: 'index',
-      formats: ['es', 'umd'],
+      fileName: 'ui',
+      // formats: ['es', 'umd'],
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
