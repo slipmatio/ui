@@ -1,5 +1,5 @@
-import type { DefineComponent, ComponentOptionsMixin, VNodeProps, AllowedComponentProps, ComponentCustomProps, ExtractPropTypes, PropType as __PropType } from 'vue';
-declare const _sfc_main: DefineComponent<{
+import type { PropType as __PropType } from 'vue';
+declare const _sfc_main: import("vue").DefineComponent<{
     icon: {
         type: __PropType<string | undefined>;
         required: false;
@@ -12,7 +12,7 @@ declare const _sfc_main: DefineComponent<{
         type: __PropType<string | undefined>;
         required: false;
     };
-}, {}, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, VNodeProps & AllowedComponentProps & ComponentCustomProps, Readonly<ExtractPropTypes<{
+}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     icon: {
         type: __PropType<string | undefined>;
         required: false;
