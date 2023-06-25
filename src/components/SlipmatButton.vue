@@ -1,20 +1,19 @@
 <script setup lang="ts">
 defineProps<{
-  icon?: string
+  icon?: 'trash' | 'new' | 'edit' | 'download' | 'upload' | 'reset'
   isWorking?: boolean
   workingText?: string
   fullWidth?: boolean
   isSubmit?: boolean
-  primary?: boolean
   secondary?: boolean
 }>()
 </script>
 <template>
   <button
     :type="isSubmit ? 'submit' : 'button'"
-    class="btn"
+    class="slipmat-btn"
     :class="{
-      'primary': primary,
+      'primary': !secondary,
       'secondary': secondary,
       'full-width': fullWidth,
     }"
@@ -23,7 +22,10 @@ defineProps<{
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
-      class="w-4 h-4 mr-1 -ml-1 animate-spin"
+      class="w-4 h-4 -ml-1 animate-spin"
+      :class="{
+        'mr-2': workingText,
+      }"
       v-if="isWorking"
     >
       <circle
@@ -134,24 +136,24 @@ defineProps<{
     </template>
   </button>
 </template>
-<style scoped lang="postcss">
-.btn {
-  @apply inline-flex px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 leading-5 transition duration-150 ease-in-out bg-gray-400;
+<style lang="postcss">
+.slipmat-btn {
+  @apply inline-flex px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 leading-5 transition duration-150 ease-in-out bg-gray-400 justify-center items-center;
 }
 
-.btn.full-width {
+.slipmat-btn.full-width {
   @apply justify-center w-full;
 }
 
-.btn.primary {
+.slipmat-btn.primary {
   @apply bg-slipmat-500 hover:bg-slipmat-600 dark:bg-slipmat-600 dark:hover:bg-slipmat-500 text-white focus:border-slipmat-400 hover:text-gray-100 active:bg-slipmat-500 focus:ring-opacity-50 focus:ring-slipmat-400 dark:focus:ring-slipmat-400;
 }
 
-.btn.secondary {
+.slipmat-btn.secondary {
   @apply bg-white text-gray-700 focus:outline-none focus:ring-blue-500 focus:border-slipmat-300 hover:bg-gray-50 active:bg-gray-50;
 }
 
-.btn.secondary svg {
+.slipmat-btn.secondary svg {
   @apply text-gray-500;
 }
 </style>
