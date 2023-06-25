@@ -1,38 +1,22 @@
 <script setup lang="ts">
-import { ref, useAttrs } from 'vue'
-
 defineProps<{
   icon?: string
   isWorking?: boolean
   workingText?: string
+  fullWidth?: boolean
+  isSubmit?: boolean
+  primary?: boolean
+  secondary?: boolean
 }>()
-
-const isPrimary = ref(false)
-const isSecondary = ref(false)
-const buttonType = ref<'button' | 'submit'>('button')
-const isFullWidth = ref(false)
-const attrs = useAttrs()
-
-if (attrs.primary !== undefined) {
-  isPrimary.value = true
-} else if (attrs.secondary !== undefined) {
-  isSecondary.value = true
-}
-if (attrs.submit !== undefined) {
-  buttonType.value = 'submit'
-}
-if (attrs['full-width'] !== undefined) {
-  isFullWidth.value = true
-}
 </script>
 <template>
   <button
-    :type="buttonType"
+    :type="isSubmit ? 'submit' : 'button'"
     class="btn"
     :class="{
-      'primary': isPrimary,
-      'secondary': isSecondary,
-      'full-width': isFullWidth,
+      'primary': primary,
+      'secondary': secondary,
+      'full-width': fullWidth,
     }"
   >
     <svg
@@ -152,7 +136,7 @@ if (attrs['full-width'] !== undefined) {
 </template>
 <style scoped lang="postcss">
 .btn {
-  @apply inline-flex px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 leading-5 transition duration-150 ease-in-out;
+  @apply inline-flex px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 leading-5 transition duration-150 ease-in-out bg-gray-400;
 }
 
 .btn.full-width {
