@@ -1,15 +1,5 @@
-/* eslint-disable */
-const defaultTheme = require('tailwindcss/defaultTheme')
-
+/** @type {import('tailwindcss').Config} */
 module.exports = {
+  content: ['./index.html', './src/**/*.{vue,ts}'],
   presets: [require('@slipmatio/tailwind-config')],
-  darkMode: 'class',
-  variants: {
-    // The 'active' variant will be generated in addition to the defaults
-    extend: {
-      backgroundColor: ['active'],
-      display: ['group-hover'],
-      opacity: ['disabled'],
-    },
-  },
 }

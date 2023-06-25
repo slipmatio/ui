@@ -1,0 +1,26 @@
+{
+  "extends": [
+    "config:base",
+    "group:all",
+    "schedule:weekly"
+  ],
+  "enabledManagers": [
+    "npm"
+  ],
+  "packageRules": [
+    {
+      "matchManagers": [
+        "npm"
+      ],
+      "stabilityDays": 2
+    },
+    {
+      "matchPackagePatterns": [
+        "npm"
+      ],
+      "rangeStrategy": "auto"
+    }
+  ],
+  "timezone": "Europe/Helsinki",
+  "dependencyDashboard": true
+}

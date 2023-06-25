@@ -1,3 +1,3 @@
 rm -rf node_modules
-rm yarn.lock
-yarn
+rm pnpm.lock
+pnpm i
