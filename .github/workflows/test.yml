@@ -39,7 +39,7 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install front
+      - name: Install dependencies
         run: pnpm i --frozen-lockfile
 
       # - name: Install playwright browsers

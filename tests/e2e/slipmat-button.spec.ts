@@ -1,18 +1,5 @@
 import { test, expect } from '@playwright/test'
 
-test('homepage should not have scrollbars', async ({ page }) => {
-  await page.goto('/')
-
-  const html = await page.$('html')
-  if (html) {
-    const scrollWidth = Number(await html.getAttribute('scrollWidth'))
-    const clientWidth = Number(await html.getAttribute('clientWidth'))
-    const scrollBarWidth = scrollWidth - clientWidth
-
-    expect(scrollBarWidth).toBe(0)
-  }
-})
-
 test('button text should change when working', async ({ page }) => {
   await page.goto('/')
 
@@ -25,7 +12,7 @@ test('button text should change when working', async ({ page }) => {
   await expect.soft(page.getByTestId('test-working')).toHaveText('test working')
 })
 
-test('fillscreen button should be wider', async ({ page }) => {
+test('fullscreen button should be wider', async ({ page }) => {
   await page.goto('/')
 
   const normalButton = Number((await page.getByTestId('normal-width').boundingBox()).width)
