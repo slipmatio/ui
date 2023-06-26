@@ -16,6 +16,7 @@ defineProps<{
       'primary': !secondary,
       'secondary': secondary,
       'full-width': fullWidth,
+      'normal-width': !fullWidth,
     }"
   >
     <svg
@@ -138,11 +139,15 @@ defineProps<{
 </template>
 <style lang="postcss">
 .slipmat-btn {
-  @apply inline-flex px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 leading-5 transition duration-150 ease-in-out bg-gray-400 justify-center items-center;
+  @apply inline-flex px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 leading-5 transition duration-150 ease-in-out bg-gray-400 justify-center items-center min-h-[38px];
+}
+
+.slipmat-btn.normal-width {
+  @apply self-start;
 }
 
 .slipmat-btn.full-width {
-  @apply justify-center w-full;
+  @apply w-full;
 }
 
 .slipmat-btn.primary {
