@@ -46,7 +46,7 @@
     "serve": "DEBUG=0 vite preview",
     "build": "DEBUG=0 vue-tsc && vite build",
     "test": "DEBUG=0 vitest",
-    "test:ci-e2e": "playwright test",
+    "test:ci-e2e": "DEBUG=0 playwright test",
     "coverage": "DEBUG=0 vitest run --coverage"
   },
   "devDependencies": {
