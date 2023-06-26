@@ -3,8 +3,8 @@
     "config:base",
     "group:all",
     "schedule:weekly",
-    "automergePr",
-    "widenPeerDependencies",
+    ":automergePr",
+    ":widenPeerDependencies",
     "schedule:automergeWeekly"
   ],
   "enabledManagers": [
