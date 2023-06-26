@@ -43,9 +43,9 @@
   "scripts": {
     "rebuild": "bash scripts/rebuild.sh",
     "dev": "DEBUG=0 vite dev",
-    "serve": "DEBUG=0 vite preview",
     "build": "DEBUG=0 vue-tsc && vite build",
     "test": "DEBUG=0 vitest",
+    "test:e2e": "DEBUG=0 playwright test --ui",
     "test:ci-e2e": "DEBUG=0 playwright test",
     "coverage": "DEBUG=0 vitest run --coverage"
   },

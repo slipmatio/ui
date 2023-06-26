@@ -24,3 +24,12 @@ test('button text should change when working', async ({ page }) => {
 
   await expect.soft(page.getByTestId('test-working')).toHaveText('test working')
 })
+
+test('fillscreen button should be wider', async ({ page }) => {
+  await page.goto('/')
+
+  const normalButton = Number((await page.getByTestId('normal-width').boundingBox()).width)
+  const fullButton = Number((await page.getByTestId('full-width').boundingBox()).width)
+
+  expect(normalButton < fullButton).toBe(true)
+})

@@ -52,8 +52,8 @@ function startWorking() {
       <SlipmatButton icon="reset">reset</SlipmatButton>
     </div>
     <div class="flex flex-col w-1/2 space-y-2">
-      <SlipmatButton>normal width</SlipmatButton>
-      <SlipmatButton full-width>full-width</SlipmatButton>
+      <SlipmatButton data-testid="normal-width">normal width</SlipmatButton>
+      <SlipmatButton data-testid="full-width" full-width>full-width</SlipmatButton>
       <SlipmatButton secondary icon="new">normal new</SlipmatButton>
       <SlipmatButton secondary icon="new" full-width>full-width new</SlipmatButton>
     </div>
