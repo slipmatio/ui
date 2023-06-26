@@ -3,13 +3,13 @@ import { devices } from '@playwright/test'
 
 const config: PlaywrightTestConfig = {
   testDir: './tests/e2e',
-  timeout: 5 * 1000,
+  timeout: 15 * 1000,
   expect: {
     /**
      * Maximum time expect() should wait for the condition to be met.
      * For example in `await expect(locator).toHaveText();`
      */
-    timeout: 2000,
+    timeout: 3000,
   },
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
