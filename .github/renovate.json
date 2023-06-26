@@ -3,7 +3,6 @@
     "config:base",
     "group:all",
     "schedule:weekly",
-    "automergeAll",
     "automergeRequireAllStatusChecks:success",
     "automergePr",
     "widenPeerDependencies",
