@@ -2,7 +2,12 @@
   "extends": [
     "config:base",
     "group:all",
-    "schedule:weekly"
+    "schedule:weekly",
+    "automergeAll",
+    "automergeRequireAllStatusChecks:success",
+    "automergePr",
+    "widenPeerDependencies",
+    "schedule:automergeWeekly"
   ],
   "enabledManagers": [
     "npm"
@@ -12,6 +17,7 @@
       "matchManagers": [
         "npm"
       ],
+      "automerge": true,
       "stabilityDays": 2
     },
     {
