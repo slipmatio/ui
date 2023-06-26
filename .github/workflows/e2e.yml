@@ -52,9 +52,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run e2e tests
-        run: |
-          pnpm build
-          pnpm test:ci-e2e
+        run: pnpm test:ci-e2e
 
       - uses: actions/upload-artifact@v3
         if: always()
