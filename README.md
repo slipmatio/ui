@@ -33,7 +33,7 @@ pnpm dev
 pnpm build
 ```
 
-#### TBA: Run end-to-end tests
+#### Run end-to-end tests
 
 ```
 pnpm test:e2e

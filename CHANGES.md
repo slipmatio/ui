@@ -1,5 +1,13 @@
 # @slipmatio/ui
 
+## 0.1.1 (2023-06-26)
+
+- Chore: added tests, GitHub actions.
+
+## 0.1.0 (2023-06-25)
+
+- Refactor: new repo configuration based on current Vite / Vue best practices.
+
 ## 0.0.8 (2021-02-02)
 
 - Bumped deps.

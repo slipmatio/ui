@@ -1,9 +1,8 @@
 import { resolve } from 'path'
-import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import dts from 'vite-plugin-dts'
+import { defineConfig } from 'vitest/config'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue(), dts()],
   build: {
@@ -25,6 +24,16 @@ export default defineConfig({
           vue: 'Vue',
         },
       },
+    },
+  },
+  test: {
+    globals: true,
+    include: ['tests/unit/**/*.{test,spec}.ts', 'src/**/*.spec.ts'],
+    environment: 'happy-dom',
+    coverage: {
+      exclude: ['__mocks__/*', 'tests/*', '**/*.spec.ts'],
+      provider: 'v8',
+      reporter: ['text', 'json', 'json-summary'],
     },
   },
 })
