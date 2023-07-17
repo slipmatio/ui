@@ -1,5 +1,13 @@
 # @slipmatio/ui
 
+### 0.1.2 - (2023-07-17)
+
+- CI: tag and release automatically on publish.
+
+## 0.1.1 (2023-06-26)
+
+- Chore: added tests, GitHub actions.
+
 ## 0.1.1 (2023-06-26)
 
 - Chore: added tests, GitHub actions.
