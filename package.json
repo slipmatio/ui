@@ -53,8 +53,8 @@
   "devDependencies": {
     "@playwright/test": "1.39.0",
     "@slipmatio/tailwind-config": "3.0.0",
-    "@types/node": "20.8.10",
-    "@vitejs/plugin-vue": "4.4.0",
+    "@types/node": "20.9.0",
+    "@vitejs/plugin-vue": "4.4.1",
     "@vitest/coverage-v8": "0.34.6",
     "@vue/test-utils": "2.4.1",
     "autoprefixer": "10.4.16",
@@ -65,7 +65,7 @@
     "vite": "4.5.0",
     "vite-plugin-dts": "3.6.3",
     "vitest": "0.34.6",
-    "vue": "3.3.7",
+    "vue": "3.3.8",
     "vue-tsc": "1.8.22"
   },
   "peerDependencies": {
