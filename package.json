@@ -53,20 +53,20 @@
   "devDependencies": {
     "@playwright/test": "1.40.1",
     "@slipmatio/tailwind-config": "3.0.0",
-    "@types/node": "20.10.4",
+    "@types/node": "20.10.5",
     "@vitejs/plugin-vue": "4.5.2",
-    "@vitest/coverage-v8": "1.0.4",
+    "@vitest/coverage-v8": "1.1.0",
     "@vue/test-utils": "2.4.3",
     "autoprefixer": "10.4.16",
     "happy-dom": "12.10.3",
     "postcss": "8.4.32",
-    "tailwindcss": "3.3.6",
+    "tailwindcss": "3.4.0",
     "typescript": "5.3.3",
     "vite": "5.0.10",
     "vite-plugin-dts": "3.6.4",
-    "vitest": "1.0.4",
-    "vue": "3.3.11",
-    "vue-tsc": "1.8.25"
+    "vitest": "1.1.0",
+    "vue": "3.3.13",
+    "vue-tsc": "1.8.26"
   },
   "peerDependencies": {
     "@slipmatio/tailwind-config": "3",
