@@ -51,7 +51,7 @@
     "coverage": "DEBUG=0 vitest run --coverage"
   },
   "devDependencies": {
-    "@playwright/test": "1.44.0",
+    "@playwright/test": "1.44.1",
     "@slipmatio/tailwind-config": "3.0.0",
     "@types/node": "20.12.12",
     "@vitejs/plugin-vue": "5.0.4",
