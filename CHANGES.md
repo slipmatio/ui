@@ -5,6 +5,7 @@
 - Fix: make sure button text doesn't wrap.
 - Chore: upgraded Vite and Renovate configs.
 - Chore: bumped deps.
+- CI: only release after tests pass.
 
 ### 0.1.2 - (2023-07-17)
 
