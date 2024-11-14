@@ -17,11 +17,10 @@ export default mergeConfig(
       environment: 'happy-dom',
       include: ['tests/unit/**/*.test.ts', 'src/**/*.spec.ts'],
       root: fileURLToPath(new URL('./', import.meta.url)),
-      setupFiles: ['./tests/setup/testglobals.ts'],
       coverage: {
         provider: 'v8',
         reporter: ['text', 'json', 'json-summary'],
-        include: ['!src/main.ts', 'src/**/*.ts', 'src/**/*.vue'],
+        include: ['!src/dev.ts', 'src/**/*.ts', 'src/**/*.vue'],
         thresholds: {
           lines: 10,
           functions: 0,
