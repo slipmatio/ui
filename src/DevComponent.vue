@@ -20,18 +20,15 @@ function startWorking() {
     </div>
     <div class="container flex flex-row items-center space-x-2">
       <SlipmatButton data-testid="working" :is-working="true">working</SlipmatButton>
-      <SlipmatButton
-        data-testid="working-downloading"
-        :is-working="true"
-        working-text="Downloading"
-      >
+      <SlipmatButton data-testid="working-downloading" :is-working="true" working-text="Downloading">
         downloading
       </SlipmatButton>
       <SlipmatButton
+        class="w-36"
         data-testid="test-working"
         :is-working="testWorking"
-        @click.prevent="startWorking"
         working-text="is working"
+        @click.prevent="startWorking"
       >
         test working
       </SlipmatButton>
@@ -42,7 +39,7 @@ function startWorking() {
         secondary downloading
       </SlipmatButton>
     </div>
-    <div class="container flex flex-row items-center space-x-2">
+    <div class="container flex flex-col items-center space-y-2">
       <SlipmatButton>no icon</SlipmatButton>
       <SlipmatButton icon="trash">trash</SlipmatButton>
       <SlipmatButton icon="new">new</SlipmatButton>

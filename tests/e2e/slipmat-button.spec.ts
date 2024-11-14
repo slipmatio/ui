@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test'
+import { expect, test } from '@playwright/test'
 
 test('button text should change when working', async ({ page }) => {
   await page.goto('/')
@@ -15,8 +15,8 @@ test('button text should change when working', async ({ page }) => {
 test('fullscreen button should be wider', async ({ page }) => {
   await page.goto('/')
 
-  const normalButton = Number((await page.getByTestId('normal-width').boundingBox()).width)
-  const fullButton = Number((await page.getByTestId('full-width').boundingBox()).width)
+  const normalButton = Number((await page.getByTestId('normal-width').boundingBox())?.width)
+  const fullButton = Number((await page.getByTestId('full-width').boundingBox())?.width)
 
   expect(normalButton < fullButton).toBe(true)
 })

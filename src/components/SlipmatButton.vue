@@ -13,13 +13,14 @@ defineProps<{
     :type="isSubmit ? 'submit' : 'button'"
     class="slipmat-btn"
     :class="{
-      'primary': !secondary,
-      'secondary': secondary,
+      primary: !secondary,
+      secondary: secondary,
       'full-width': fullWidth,
       'normal-width': !fullWidth,
     }"
   >
     <svg
+      v-if="isWorking"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
@@ -27,16 +28,8 @@ defineProps<{
       :class="{
         'mr-2': workingText,
       }"
-      v-if="isWorking"
     >
-      <circle
-        class="opacity-25"
-        cx="12"
-        cy="12"
-        r="10"
-        stroke="currentColor"
-        stroke-width="4"
-      ></circle>
+      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
       <path
         class="opacity-75"
         fill="currentColor"
@@ -44,11 +37,11 @@ defineProps<{
       ></path>
     </svg>
     <svg
+      v-if="icon === 'trash' && !isWorking"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
       fill="currentColor"
       class="w-4 h-4 mr-1 -ml-1"
-      v-if="icon === 'trash' && !isWorking"
     >
       <path
         fill-rule="evenodd"
@@ -57,12 +50,12 @@ defineProps<{
       />
     </svg>
     <svg
+      v-if="icon === 'new' && !isWorking"
       class="w-4 h-4 mr-1 -ml-1"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
-      v-if="icon === 'new' && !isWorking"
     >
       <path
         stroke-linecap="round"
@@ -72,12 +65,12 @@ defineProps<{
       />
     </svg>
     <svg
+      v-if="icon === 'edit' && !isWorking"
       class="w-4 h-4 mr-1 -ml-1"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
-      v-if="icon === 'edit' && !isWorking"
     >
       <path
         stroke-linecap="round"
@@ -85,19 +78,14 @@ defineProps<{
         stroke-width="2"
         d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
       />
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-      />
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
     </svg>
     <svg
+      v-if="icon === 'download' && !isWorking"
       class="w-4 h-4 mr-1 -ml-1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
       fill="currentColor"
-      v-if="icon === 'download' && !isWorking"
     >
       <path
         fill-rule="evenodd"
@@ -106,11 +94,11 @@ defineProps<{
       />
     </svg>
     <svg
+      v-if="icon === 'upload' && !isWorking"
       class="w-4 h-4 mr-1 -ml-1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
       fill="currentColor"
-      v-if="icon === 'upload' && !isWorking"
     >
       <path
         fill-rule="evenodd"
@@ -119,11 +107,11 @@ defineProps<{
       />
     </svg>
     <svg
+      v-if="icon === 'reset' && !isWorking"
       class="w-4 h-4 mr-1 -ml-1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
       fill="currentColor"
-      v-if="icon === 'reset' && !isWorking"
     >
       <path
         fill-rule="evenodd"
@@ -139,7 +127,7 @@ defineProps<{
 </template>
 <style lang="postcss">
 .slipmat-btn {
-  @apply inline-flex px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 leading-5 transition duration-150 ease-in-out bg-gray-400 justify-center items-center min-h-[38px];
+  @apply whitespace-nowrap inline-flex px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 leading-5 transition duration-150 ease-in-out bg-gray-400 justify-center items-center min-h-[38px];
 }
 
 .slipmat-btn.normal-width {
