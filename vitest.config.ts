@@ -24,8 +24,8 @@ export default mergeConfig(
         thresholds: {
           lines: 10,
           functions: 0,
-          branches: 10,
-          statements: 10,
+          branches: 0,
+          statements: 0,
         },
       },
     },

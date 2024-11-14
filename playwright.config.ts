@@ -30,25 +30,17 @@ const config: PlaywrightTestConfig = {
   },
   projects: [
     {
-      name: 'iPhone 6',
+      name: 'iPhone SE',
       use: {
         browserName: 'webkit',
-        ...devices['iPhone 6'],
-      },
-    },
-    {
-      name: 'Macbook 11',
-      use: {
-        browserName: 'firefox',
-        ...devices['Macbook 11'],
-        video: 'on-first-retry',
+        ...devices['iPhone SE'],
       },
     },
     {
       name: 'Desktop',
       use: {
-        browserName: 'chromium',
-        ...devices['Macbook Pro'],
+        browserName: 'firefox',
+        ...devices['Desktop Firefox'],
       },
     },
   ],
