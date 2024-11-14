@@ -1,4 +1,5 @@
 import { mount } from '@vue/test-utils'
+import { expect, test } from 'vitest'
 import Component from './SlipmatButton.vue'
 
 test('components/SlipmatButton.vue', async () => {
