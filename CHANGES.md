@@ -1,5 +1,11 @@
 # @slipmatio/ui
 
+### 0.2.0 - (2024-11-14)
+
+- Fix: make sure button text doesn't wrap.
+- Chore: upgraded Vite and Renovate configs.
+- Chore: bumped deps.
+
 ### 0.1.2 - (2023-07-17)
 
 - CI: tag and release automatically on publish.
