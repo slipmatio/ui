@@ -38,3 +38,5 @@ pnpm test:e2e
 ```
 
 ### Publishing
+
+Bump version number in `package.json`, merge to main.

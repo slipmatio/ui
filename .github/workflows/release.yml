@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4.2.2
-      - uses: pnpm/action-setup@v2.4.1
+      - uses: pnpm/action-setup@v4.0.0
         with:
           version: 9
           run_install: false
@@ -40,7 +40,7 @@ jobs:
 
       - name: Generate Changelog
         id: changelog
-        uses: jaywcjlove/changelog-generator@main
+        uses: jaywcjlove/changelog-generator@v2.2.2
         if: steps.create_tag.outputs.successful
         with:
           head-ref: ${{steps.create_tag.outputs.version}}
