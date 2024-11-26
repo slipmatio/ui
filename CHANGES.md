@@ -1,5 +1,10 @@
 # @slipmatio/ui
 
+### 0.2.1 - (2024-11-27)
+
+- Refactor: explicitly test types in CI.
+- Chore: bumped deps.
+
 ### 0.2.0 - (2024-11-14)
 
 - Fix: make sure button text doesn't wrap.

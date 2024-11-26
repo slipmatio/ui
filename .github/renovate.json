@@ -1,11 +1,11 @@
 {
-  "extends": ["config:recommended", "group:all", "schedule:weekly", ":widenPeerDependencies"],
-  "enabledManagers": ["npm"],
+  "extends": ["config:recommended", "group:all", "schedule:weekly"],
+  "enabledManagers": ["npm", "github-actions"],
   "packageRules": [
     {
       "matchManagers": ["npm"],
-      "automerge": true,
-      "minimumReleaseAge": "2 days"
+      "minimumReleaseAge": "3 days",
+      "automerge": true
     },
     {
       "rangeStrategy": "auto",

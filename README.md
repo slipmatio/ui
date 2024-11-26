@@ -13,8 +13,6 @@ Warning: this project is under active development and not intended for public us
 
 ### Basic Commands
 
-You need `pnpm` installed.
-
 #### Project setup
 
 ```
@@ -40,7 +38,3 @@ pnpm test:e2e
 ```
 
 ### Publishing
-
-```
-pnpm publish --access public
-```
