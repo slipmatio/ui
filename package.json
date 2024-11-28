@@ -1,6 +1,6 @@
 {
   "name": "@slipmatio/ui",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "type": "module",
   "description": "Common UI components for Slipmat.io projects",
   "author": {
@@ -30,9 +30,9 @@
       "import": "./dist/ui.js",
       "require": "./dist/ui.cjs"
     },
-    "./style.css": {
-      "import": "./dist/style.css",
-      "require": "./dist/style.css"
+    "./ui.css": {
+      "import": "./dist/ui.css",
+      "require": "./dist/ui.css"
     }
   },
   "files": [

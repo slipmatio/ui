@@ -1,5 +1,9 @@
 # @slipmatio/ui
 
+### 0.2.2 - (2024-11-28)
+
+- Fix: fixed CSS import.
+
 ### 0.2.1 - (2024-11-27)
 
 - Refactor: explicitly test types in CI.
