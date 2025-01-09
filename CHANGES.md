@@ -1,5 +1,9 @@
 # @slipmatio/ui
 
+### 0.3.0 - (2025-01-09)
+
+- Refactor: upgraded to Tailwind 4.0 (beta).
+
 ### 0.2.2 - (2024-11-28)
 
 - Fix: fixed CSS import.

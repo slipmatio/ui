@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import '../assets/styles.css'
+
 defineProps<{
   icon?: 'trash' | 'new' | 'edit' | 'download' | 'upload' | 'reset'
   isWorking?: boolean
@@ -125,28 +127,3 @@ defineProps<{
     </template>
   </button>
 </template>
-<style lang="postcss">
-.slipmat-btn {
-  @apply whitespace-nowrap inline-flex px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 leading-5 transition duration-150 ease-in-out bg-gray-400 justify-center items-center min-h-[38px];
-}
-
-.slipmat-btn.normal-width {
-  @apply self-start;
-}
-
-.slipmat-btn.full-width {
-  @apply w-full;
-}
-
-.slipmat-btn.primary {
-  @apply bg-slipmat-500 hover:bg-slipmat-600 dark:bg-slipmat-600 dark:hover:bg-slipmat-500 text-white focus:border-slipmat-400 hover:text-gray-100 active:bg-slipmat-500 focus:ring-opacity-50 focus:ring-slipmat-400 dark:focus:ring-slipmat-400;
-}
-
-.slipmat-btn.secondary {
-  @apply bg-white text-gray-700 focus:outline-none focus:ring-blue-500 focus:border-slipmat-300 hover:bg-gray-50 active:bg-gray-50;
-}
-
-.slipmat-btn.secondary svg {
-  @apply text-gray-500;
-}
-</style>

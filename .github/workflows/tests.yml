@@ -5,18 +5,18 @@ on:
     branches:
       - main
     paths:
-      - '.github/workflows/tests.yml'
-      - 'pnpm-lock.yaml'
-      - 'src/**/*.ts'
-      - 'src/**/*.vue'
-      - 'tests/**/*.ts'
+      - ".github/workflows/tests.yml"
+      - "pnpm-lock.yaml"
+      - "src/**/*.ts"
+      - "src/**/*.vue"
+      - "tests/**/*.ts"
   pull_request:
     paths:
-      - '.github/workflows/tests.yml'
-      - 'pnpm-lock.yaml'
-      - 'src/**/*.ts'
-      - 'src/**/*.vue'
-      - 'tests/**/*.ts'
+      - ".github/workflows/tests.yml"
+      - "pnpm-lock.yaml"
+      - "src/**/*.ts"
+      - "src/**/*.vue"
+      - "tests/**/*.ts"
   workflow_dispatch:
 
 concurrency:
@@ -34,7 +34,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4.2.2
-      - uses: actions/cache@v4.1.2
+      - uses: actions/cache@v4.2.0
         with:
           path: /home/runner/.local/share/pnpm/store
           key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -47,7 +47,7 @@ jobs:
       - uses: actions/setup-node@v4.1.0
         with:
           node-version: 22
-          cache: 'pnpm'
+          cache: "pnpm"
 
       - name: Type Check
         run: pnpm ts
@@ -71,7 +71,7 @@ jobs:
       - name: Run e2e tests
         run: pnpm test:ci-e2e
 
-      - uses: actions/upload-artifact@v4.4.3
+      - uses: actions/upload-artifact@v4.5.0
         if: always()
         with:
           name: playwright-report

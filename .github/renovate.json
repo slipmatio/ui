@@ -1,15 +1,29 @@
 {
-  "extends": ["config:recommended", "group:all", "schedule:weekly"],
+  "extends": ["config:recommended"],
   "enabledManagers": ["npm", "github-actions"],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true
+  },
   "packageRules": [
     {
       "matchManagers": ["npm"],
-      "minimumReleaseAge": "3 days",
-      "automerge": true
+      "matchUpdateTypes": ["patch"],
+      "enabled": false
     },
     {
-      "rangeStrategy": "auto",
-      "matchPackageNames": ["/npm/"]
+      "matchManagers": ["npm"],
+      "groupName": "npm-dependencies",
+      "groupSlug": "frontend",
+      "automerge": true,
+      "minimumReleaseAge": "3 days",
+      "automergeSchedule": ["after 4am and before 8am on Monday and Thursday"]
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "automerge": true,
+      "minimumReleaseAge": "3 days",
+      "automergeSchedule": ["after 4am and before 8am on Monday and Thursday"]
     }
   ],
   "timezone": "Europe/Helsinki",

@@ -1,10 +1,11 @@
+import tailwindcss from '@tailwindcss/vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 import dts from 'vite-plugin-dts'
 import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
-  plugins: [vue(), dts({ tsconfigPath: './tsconfig.app.json', rollupTypes: true })],
+  plugins: [tailwindcss(), vue(), dts({ tsconfigPath: './tsconfig.app.json', rollupTypes: true })],
   build: {
     emptyOutDir: true,
     lib: {
